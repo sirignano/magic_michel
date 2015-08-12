@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+$(function() {
+  $('li a').bind('click',function(event){
+    var $anchor = $(this);
+
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top
+    }, 1000);
+    event.preventDefault();
+  });
+});
+
+  </script>
+<style>
+body {
+  margin: 10px;
+  background-color: #BAB4B4;
+}
+#header {
+  position: fixed;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+#header nav {
+  max-width: 900px;
+  margin: 0 auto;
+}
+#header a {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+#header a:hover, #header a.active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#position-block {
+  position: fixed;
+  z-index: 1000;
+  color: white;
+}
+
+h1 {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 69px;
+  line-height: 78px;
+  padding: 20px 0px 10px 20px;
+  margin: 0;
+}
+
+p {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+article {
+  position: relative;
+  -moz-box-shadow: black 0px 0px 15px;
+  -webkit-box-shadow: black 0px 0px 15px;
+  box-shadow: black 0px 0px 15px;
+}
+article header {
+  padding-top: 30px;
+}
+article .content {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 60px;
+  -webkit-column-gap: 60px;
+  column-gap: 60px;
+  padding: 0 20px 60px 20px;
+}
+article .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.panel.one article {
+  background-color: #00AEFF;
+}
+
+.panel.three article {
+  background-color: #292929;
+  color: white;
+}
+
+.panel.two article {
+  background-color: #FFFFFF;
+  color: #292929;
+}
+</style>
+</head>
+<body>
+
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+
+                    <li>
+			<a href="#top">Acceuil</a>
+                    </li>
+                    <li>
+                        <a href="#Information">Info</a>
+                    </li>
+                    <li>
+                        <a href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+<section class="alert alert-success" id="top"></section>
+  <section class='panel one' id='panelOne'>
+    <article>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img_chania.jpg" alt="...">
+      <div class="carousel-caption">
+          <h3>Terrassement</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img_flower.jpg" alt="...">
+      <div class="carousel-caption">
+          <h3>Livraison de Maïs</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="img_chania2.jpg" alt="...">
+      <div class="carousel-caption">
+          <h3>Tournevisseur</h3>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
+    </article>
+  </section>
+  <section class='panel two' id='Information'>
+    <article>
+      <div class='container'>
+        <header>
+          <h1>Info</h1>
+        </header>
+        <div class='content'>
+          <p>I am the Doctor, and you are the Daleks! Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you? Aw, you're all Mr. Grumpy Face today. It's a fez. I wear a fez now. Fezes are cool. The way I see it, every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant. Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?</p>
+          <img src="http://www.clicanoo.re/IMG/jpg/-15734.jpg" style="width:300px;" alt="...">
+          <p>You hit me with a cricket bat. You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better? You hit me with a cricket bat. Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?</p>
+          <p>I hate yogurt. It's just stuff with bits in. You know how I sometimes have really brilliant ideas? You hit me with a cricket bat.</p>
+          <p>You hit me with a cricket bat. You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better? You hit me with a cricket bat. Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?</p>
+          <p>I hate yogurt. It's just stuff with bits in. You know how I sometimes have really brilliant ideas? You hit me with a cricket bat.</p>
+          <p>You hit me with a cricket bat. You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better? You hit me with a cricket bat. Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?</p>
+          <p>I hate yogurt. It's just stuff with bits in. You know how I sometimes have really brilliant ideas? You hit me with a cricket bat.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class='panel three' id='Contact'>
+    <article>
+      <div class='container'>
+        <header>
+          <h1>Contact</h1>
+        </header>
+        <div class='content'>
+          <img src="http://radionotredame.net/wp-content/uploads/sarkozy2.jpg" style="width:300px;height:300px;" alt="...">
+          <p>I am the last of my species, and I know how that weighs on the heart so don't lie to me! I am the last of my species, and I know how that weighs on the heart so don't lie to me! It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! Stop talking, brain thinking. Hush. I'm the Doctor, I'm worse than everyone's aunt. *catches himself* And that is not how I'm introducing myself. No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister.</p>
+          <p>Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you? Did I mention we have comfy chairs? No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. You know how I sometimes have really brilliant ideas? *Insistently* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!</p>
+          <p>Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you? Did I mention we have comfy chairs? No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. You know how I sometimes have really brilliant ideas? *Insistently* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!</p>
+          <img src="img_flower2.jpg" style="width:300px;" alt="...">
+          <p>Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you? Did I mention we have comfy chairs? No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. You know how I sometimes have really brilliant ideas? *Insistently* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!</p>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
